@@ -1,4 +1,4 @@
-# Project Title
+# Gif.ai
 
 🔍 Find the perfect GIF for every situation with this app! 
 
