@@ -1,11 +1,11 @@
-package com.github.orelzion.gifai.model.tensor
+package com.github.orelzion.gifai.model.tenor
 
-class MockTensorRepository: TensorRepository {
-    override suspend fun search(query: String): Result<TensorResponse> {
+class MockTenorRepository: TenorRepository {
+    override suspend fun search(query: String): Result<TenorResponse> {
         return Result.success(
-            TensorResponse(
+            TenorResponse(
                 results = listOf(
-                    TensorResult(
+                    TenorResult(
                         media = listOf(
                             Media(
                                 gif = Gif(

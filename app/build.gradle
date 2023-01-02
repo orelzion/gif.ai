@@ -25,7 +25,7 @@ android {
         }
 
         buildConfigField "String", "OPEN_AI_API_KEY", secretsProperties['OPEN_AI_API_KEY']
-        buildConfigField "String", "TENSOR_API_KEY", secretsProperties['TENSOR_API_KEY']
+        buildConfigField "String", "TENOR_API_KEY", secretsProperties['TENOR_API_KEY']
     }
 
     buildTypes {

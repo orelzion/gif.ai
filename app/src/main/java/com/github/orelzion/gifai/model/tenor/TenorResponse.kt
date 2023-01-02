@@ -1,14 +1,14 @@
-package com.github.orelzion.gifai.model.tensor
+package com.github.orelzion.gifai.model.tenor
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class TensorResponse(
-    val results: List<TensorResult>
+data class TenorResponse(
+    val results: List<TenorResult>
 )
 
 @Serializable
-data class TensorResult(
+data class TenorResult(
     val id: String,
     val title: String,
     val content_description: String,

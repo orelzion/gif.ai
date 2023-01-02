@@ -3,9 +3,9 @@ package com.github.orelzion.gifai.di
 import com.github.orelzion.gifai.model.openai.OpenAiApi
 import com.github.orelzion.gifai.model.openai.OpenAiRepository
 import com.github.orelzion.gifai.model.openai.OpenAiRepositoryImpl
-import com.github.orelzion.gifai.model.tensor.TensorApi
-import com.github.orelzion.gifai.model.tensor.TensorRepository
-import com.github.orelzion.gifai.model.tensor.TensorRepositoryImpl
+import com.github.orelzion.gifai.model.tenor.TenorApi
+import com.github.orelzion.gifai.model.tenor.TenorRepository
+import com.github.orelzion.gifai.model.tenor.TenorRepositoryImpl
 import com.github.orelzion.gifai.viewmodel.GifAiViewModel
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
@@ -48,16 +48,16 @@ val appModule = module {
     }
     factoryOf(::OpenAiRepositoryImpl) { bind<OpenAiRepository>() }
 
-    // Tensor API
-    single<TensorApi> {
+    // Tenor API
+    single<TenorApi> {
         Retrofit.Builder()
             .baseUrl("https://api.tenor.com/")
             .client(get())
             .addConverterFactory(get())
             .build()
-            .create(TensorApi::class.java)
+            .create(TenorApi::class.java)
     }
-    factoryOf(::TensorRepositoryImpl) { bind<TensorRepository>() }
+    factoryOf(::TenorRepositoryImpl) { bind<TenorRepository>() }
 
     // ViewModels
     viewModelOf(::GifAiViewModel)

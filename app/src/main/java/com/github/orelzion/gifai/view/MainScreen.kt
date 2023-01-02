@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.github.orelzion.gifai.model.openai.MockOpenAiRepository
-import com.github.orelzion.gifai.model.tensor.MockTensorRepository
+import com.github.orelzion.gifai.model.tenor.MockTenorRepository
 import com.github.orelzion.gifai.viewmodel.GifAiState
 import com.github.orelzion.gifai.viewmodel.GifAiViewModel
 import org.koin.androidx.compose.koinViewModel
@@ -47,7 +47,7 @@ fun MainScreen(viewModel: GifAiViewModel = koinViewModel()) {
 fun MainScreenPreview() {
     MainScreen(
         GifAiViewModel(
-            MockTensorRepository(),
+            MockTenorRepository(),
             MockOpenAiRepository()
         )
     )

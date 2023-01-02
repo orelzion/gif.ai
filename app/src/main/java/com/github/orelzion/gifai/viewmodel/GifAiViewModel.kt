@@ -3,7 +3,7 @@ package com.github.orelzion.gifai.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.orelzion.gifai.model.openai.OpenAiRepository
-import com.github.orelzion.gifai.model.tensor.TensorRepository
+import com.github.orelzion.gifai.model.tenor.TenorRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -16,7 +16,7 @@ sealed class GifAiState {
 }
 
 class GifAiViewModel(
-    private val tensorRepository: TensorRepository,
+    private val tenorRepository: TenorRepository,
     private val openAiRepository: OpenAiRepository
 ) : ViewModel() {
 
@@ -28,7 +28,7 @@ class GifAiViewModel(
             stateFlow.update { GifAiState.Loading }
 
             openAiRepository.getCompletions(query).onSuccess { predictedGif ->
-                tensorRepository.search(predictedGif).onSuccess { response ->
+                tenorRepository.search(predictedGif).onSuccess { response ->
                     stateFlow.update {
                         val firstResult = response.results.first()
                         GifAiState.Success(
