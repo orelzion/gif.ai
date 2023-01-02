@@ -38,12 +38,12 @@ Instructions on how to use your project and examples of common use cases.
 - Generate sarcastic search terms using the OpenAI API
 - View GIF and search term
 
-## Screenshots
+## 📷 Previews
 
-https://user-images.githubusercontent.com/1846941/210208766-801a72bf-983a-4eb4-9605-0288ec511bf4.mp4
-
-https://user-images.githubusercontent.com/1846941/210208798-d3b82c89-7b33-4873-ae04-53188e7cf126.png
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/1846941/210208798-d3b82c89-7b33-4873-ae04-53188e7cf126.png" alt="drawing" width="270px" />
+<img src="https://user-images.githubusercontent.com/1846941/210210335-5f1ac48b-3671-4ddb-888d-67039e79a992.gif" alt="drawing" width="269px" /></br>
+</p>
 
 
 ## 🛠 Dependencies
