@@ -29,12 +29,9 @@ fun MainScreen(viewModel: GifAiViewModel = koinViewModel()) {
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
+                .padding(16.dp)
         ) {
-            when (viewState.value) {
-                GifAiState.Loading -> LoadingState()
-                is GifAiState.Success -> SuccessState(viewState)
-                is GifAiState.Error -> ErrorState(viewState)
-            }
+            MessagesList(messages = viewState.value.messages)
         }
         InputArea(message) {
             viewModel.searchGifs(message.value)
@@ -80,31 +77,6 @@ private fun ErrorState(viewState: State<GifAiState>) {
             modifier = Modifier
                 .align(Alignment.Center)
                 .padding(16.dp)
-        )
-    }
-}
-
-@Composable
-private fun SuccessState(viewState: State<GifAiState>) {
-    Column(modifier = Modifier.fillMaxSize()) {
-        GifImage(
-            modifier = Modifier
-                .fillMaxSize()
-                .weight(5f),
-            imageUrl = when (viewState.value) {
-                is GifAiState.Success -> (viewState.value as GifAiState.Success).gifUrl
-                else -> ""
-            }
-        )
-        Text(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
-                .weight(1f),
-            text = when (viewState.value) {
-                is GifAiState.Success -> (viewState.value as GifAiState.Success).gifTerm
-                else -> ""
-            }
         )
     }
 }
