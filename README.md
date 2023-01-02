@@ -41,8 +41,9 @@ Instructions on how to use your project and examples of common use cases.
 ## 📷 Previews
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/1846941/210208798-d3b82c89-7b33-4873-ae04-53188e7cf126.png" alt="drawing" width="270px" />
-<img src="https://user-images.githubusercontent.com/1846941/210210335-5f1ac48b-3671-4ddb-888d-67039e79a992.gif" alt="drawing" width="269px" /></br>
+<img src="https://user-images.githubusercontent.com/1846941/210273483-f93759be-4258-4ad2-8061-446470df86b7.gif" alt="drawing" width="270px" />
+<img src="https://user-images.githubusercontent.com/1846941/210273503-bc917db9-6085-4df3-8f99-e1fe622268fd.png" alt="drawing" width="269px" />
+<img src="https://user-images.githubusercontent.com/1846941/210273505-50c510b8-b82b-4039-a773-271ca5e2914b.png" alt="drawing" width="269px" />
 </p>
 
 
